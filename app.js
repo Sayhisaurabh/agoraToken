@@ -5,6 +5,11 @@ const port = 3000; // Change this to any port you prefer
 app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
+app.get('/',function(){
+  res.json({
+    msg:"hello"
+  })
+})
 app.post('/generateToken',(req,res)=>{
     const {app_id,app_certificate,channel} = req.body
     const agoraAccessToken = require('agora-access-token');
