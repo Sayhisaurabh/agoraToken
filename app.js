@@ -55,7 +55,7 @@ app.post('/generateToken',(req,res)=>{
     // Main function to generate the token and log it
     function main() {
       const agoraToken = generateAgoraToken();
-      console.log('Agora Token:', agoraToken);
+   
       res.status(200).json({
         success:true,
         message: "agora token",
