@@ -5,7 +5,7 @@ const port = 3000; // Change this to any port you prefer
 app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
-app.get('/',function(){
+app.get('/',function(req,res){
   res.json({
     msg:"hello"
   })
